@@ -3,6 +3,7 @@ package com.teach.quotes_api.demo;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
+import java.util.Random;
 
 @Service
 public class QuoteService {
@@ -36,5 +37,14 @@ public class QuoteService {
     public void delete(UUID id) {
         Quote existing = findById(id);
         quoteRepository.delete(existing);
+    }
+    private final Random random = new Random();
+
+    public Quote findRandom() {
+        List<Quote> all = quoteRepository.findAll();
+        if (all.isEmpty()) {
+            throw new QuoteNotFoundException("No quotes available yet");
+        }
+        return all.get(random.nextInt(all.size()));
     }
 }

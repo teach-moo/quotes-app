@@ -29,6 +29,11 @@ public class QuoteController {
         return quoteService.findById(id);
     }
 
+    @GetMapping("/random")
+    public Quote getRandom() {
+        return quoteService.findRandom();
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Quote create(@Valid @RequestBody Quote quote) {
