@@ -1,0 +1,17 @@
+# Java / Maven
+quotes-back/target/
+*.class
+
+# Node / React (for when quotes-frontend exists)
+quotes-frontend/node_modules/
+quotes-frontend/dist/
+quotes-frontend/build/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
