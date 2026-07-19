@@ -1,0 +1,7 @@
+com\teach\quotes_api\demo\QuoteController.class
+com\teach\quotes_api\demo\QuoteService.class
+com\teach\quotes_api\demo\Quote.class
+com\teach\quotes_api\demo\ApiExceptionHandler.class
+com\teach\quotes_api\demo\QuoteRepository.class
+com\teach\quotes_api\demo\QuoteNotFoundException.class
+com\teach\quotes_api\demo\DemoApplication.class
