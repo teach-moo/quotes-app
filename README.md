@@ -19,8 +19,11 @@ App should be up at http://localhost:8081.
 ## Stuff to mess with:
 
 `/api/quotes` - CRUD
+
 `/api/quotes/random` - gives you a random quote
+
 `/actuator/health` - should return UP if Postgres is connected
+
 `/actuator/prometheus` - raw metrics; this is the important one for what I'm building toward
 
 One thing to remember: Postgres is running in Docker. If your machine's been off, run docker compose up -d again before starting the app or it won't boot.
