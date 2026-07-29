@@ -6,9 +6,18 @@ services:
       POSTGRES_USER: quotes
       POSTGRES_PASSWORD: quotes
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - quotes_pg_data:/var/lib/postgresql/data
+
+  quotes-api:
+    build: .
+    ports:
+      - "8082:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/quotes
+    depends_on:
+      - postgres
 
 volumes:
   quotes_pg_data:
